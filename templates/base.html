@@ -44,6 +44,14 @@
       />
       <div class="navbar-nav">
         <div class="nav-item text-nowrap">
+          <form action="{% url 'logout' %}" method="POST">
+            {% csrf_token %}
+            <input
+              class="text text-capitalize"
+              type="submit"
+              value="sign out"
+            />
+          </form>
           <a class="nav-link px-3" href="#">Sign out</a>
         </div>
       </div>
